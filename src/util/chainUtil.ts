@@ -6,9 +6,10 @@ const CHAIN_NAMES: { [key: number]: string } = {
     56: Network.BSC,
     97: Network.BSC,
     137: Network.Polygon,
+    324: Network.ZkSync,
     80001: Network.Polygon,
     43114: Network.Avalanche,
-    43113: Network.Avalanche
+    43113: Network.Avalanche,
 }
 
 export function getChain(chainId: number): string {
@@ -32,6 +33,9 @@ export function getChainId(chain: any, isTestnet = false): number {
             
             case Network.Avalanche:
                 return !isTestnet ? 43114 : 43113
+
+            case Network.ZkSync:
+                return 324
         }
     }
     throw Error('getChainId, unsupported chain : ' + chain)

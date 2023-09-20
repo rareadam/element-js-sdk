@@ -11,6 +11,7 @@ export enum Network {
     BSC = 'bsc',
     Polygon = 'polygon',
     Avalanche = 'avalanche',
+    ZkSync = 'zksync',
 }
 
 export enum OrderSide {
